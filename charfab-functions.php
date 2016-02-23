@@ -307,41 +307,4 @@ function sls_replace_prod_image( $text, $form, $entry, $url_encode, $esc_html, $
     return $text;
 }
 
-
-
-// Order Thankyou page conversion code
-
-add_action( 'woocommerce_thankyou', 'my_custom_tracking' );
-
-function my_custom_tracking( $order_id ) {
-
-// Lets grab the order
-$order = new WC_Order( $order_id );
-
-?>
-<!-- Google Code for Orders Conversion Page -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 943276548;
-var google_conversion_language = "en";
-var google_conversion_format = "3";
-var google_conversion_color = "ffffff";
-var google_conversion_label = "pNiRCK-d4F4QhITlwQM";
-var google_conversion_value = 0.00;
-var google_conversion_currency = "USD";
-var google_remarketing_only = false;
-/* ]]> */
-</script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/943276548/?value=0.00&amp;currency_code=USD&amp;label=pNiRCK-d4F4QhITlwQM&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
-
-<?php }
-
-
-
 ?>
